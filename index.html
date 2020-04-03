@@ -59,29 +59,29 @@ function move1(rindex) {
 	rindex4 = -rindex / (50 / 4)
 	var elem = document.getElementById("Right");   
 	var pos3 = -1800;
-	var pos2 = -1800;
+	var pos4 = -1800;
 	console.log(rindex4)
 	rindex3 = -1910 * (rindex4 / 4)
 	id1 = setInterval(frame, 1);
 	function frame() {
 		if (rindex4 <= 0) {
 			rindex3 = 1684 * (rindex4 / 4)
-			if (pos3 >= rindex3) {
+			if (pos3 <= -1900) {
 					lmao()
 					clearInterval(id1);
 					
 					
 				} 
 					else {
-					console.log("work")
-					pos3++
-					pos2--
+					console.log("right" + pos3 + rindex3)
+					pos4++
+					pos3--
 					elem.style.top = pos3 + "px";
-					elem.style.left = ((pos2 + 1810) / 1.4) + "px";
+					elem.style.left = ((pos4 + 1800) / 1.9) + "px";
 				}
 		}
 		else {
-			if (pos3 <= rindex3) {
+			if (pos3 >= -1678) {
 				lmao()
 				clearInterval(id1);
 				
@@ -89,18 +89,18 @@ function move1(rindex) {
 			
 			} 
 				else {
-				console.log("work")
-				pos3--;
-				pos2--;
+				
+				pos3++;
+				pos4++;
 				elem.style.top = pos3 + "px";
-				elem.style.left = (pos2 + 1780) / 2 + "px";
+				elem.style.left = (pos4 + 1780) / 2 + "px";
 			}
 		}
 	}	
 }
 function move2(rindex) {
 	rindex = -rindex / (50 / 4)
-	var elem = document.getElementById("Left");   
+	var elem1 = document.getElementById("Left");   
 	var pos = -1198;
 	var pos2 = -1198;
 	console.log(rindex)
@@ -109,33 +109,33 @@ function move2(rindex) {
 	function frame2() {
 		if (rindex < 0) {
 			rindex2 = 1300 * (rindex / 4)
-			if (pos < rindex2) {
+			if (pos > -1080) {
 					lmao()
 					clearInterval(id2);
 					
 				
 				} 
 					else {
-					console.log("work")
-					pos--;
-					pos2++;
-					elem.style.top = pos + "px";
-					elem.style.left = (pos2 + 1210) / 1.95 + "px";
+					
+					pos++;
+					pos2--;
+					elem1.style.top = pos + "px";
+					elem1.style.left = (pos2 + 1205) / 1.9 + "px";
 				}
 		}
 		else {
-			if (pos > rindex2 || rindex2 == 0) {
+			if (pos < -1320 || rindex2 == 0) {
 				lmao()
 				clearInterval(id2);
 				
 			
 			} 
 				else {
-				console.log("work")
-				pos++
-				pos2++
-				elem.style.top = pos + "px";
-				elem.style.left = ((pos2 + 1210) / 2) + "px";
+				
+				pos--
+				pos2--
+				elem1.style.top = pos + "px";
+				elem1.style.left = ((pos2 + 1210) / 2) + "px";
 			}
 		}
 	}
@@ -230,7 +230,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 });
 chart.render();
 }
-function lmao() {console.log("sas")}
+function lmao() {}
 
 
 
