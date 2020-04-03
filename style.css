@@ -1,0 +1,123 @@
+#textt1 {
+	text-align: center;
+	-webkit-animation-name: example1; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-name: example1;
+	animation-duration: 2s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
+	color: #26408B
+}
+	/* Standard syntax */
+	@keyframes example1 {
+	from {color: black;}
+	to {color: red;}
+	}
+    
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  from {background-color: #C42847;}
+  to {background-color: #DE3C4B;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {width: 40px;}
+  to {width: 50px;}
+  from {font-size: 10px;}
+  to {font-size: 20px;}
+  from {background-color: #C42847;}
+  to {background-color: #DE3C4B;}
+}
+        
+        
+        
+body {
+text-align: center;
+font-family: 'Saira Stencil One', normal;
+background-image: url("https://steamuserimages-a.akamaihd.net/ugc/772778501267616228/943896502CE7357163BDEF5F6ACDFD24DB3D2015/");
+}     
+
+
+#stand {
+display: block;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: 0;
+left: -10;
+z-index:-1;
+}
+#Head {
+display: block;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: -777;
+left: 0;
+z-index:-5;" 
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+z-index:-1;
+}
+#left {
+display: block;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: -1198;
+left: -10;
+z-index:-1;
+}
+#right {
+display: block;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: -1800;
+left: -10;
+z-index:-1;
+}
+
+
+#chartContainer {
+display: block;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#textt {
+	color: red;
+}
+
+#sasa3 {
+display: block;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: 540;
+left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

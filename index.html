@@ -1,0 +1,242 @@
+<html>
+	<title style= font-family: 'Saira Stencil One', cursive; text-align: center;>
+        Corona virus calculator
+	</title>
+    
+    
+    <head>
+	 <link rel="stylesheet" type="text/css" href="style.css">
+	 <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+	</head>
+	
+
+
+
+	<body>
+        
+        
+		<font size="100" id="textt1">
+		<p>Lifeyears saved and lost</p>
+		</font>
+			<font style="font-size:22" id="textt">
+			<p id="1">Insert values and press OK. Empty textboxes display the default values</p>
+			<br>
+			<hr>
+			<form id="form" onsubmit="return false;">
+			<p id="1">Average lifetime (years)</p><input type="number" id="userInput1" placeholder="75"/>
+			<p id="1">Average shortening of lifetime due to quarantine (days)</p><input type="number" id="userInput2" placeholder="10"/>
+			<p id="1">Average age of people died due to virus (years)</p><input type="number" id="userInput3" placeholder="50"/>
+			<p id="1">Killed by virus while not quarantine (people)</p><input type="number" id="userInput4" placeholder="5000"/>
+			<p id="1">Killed by virus while quarantine (people)</p><input type="number" id="userInput5" placeholder="1000"/>
+			<p id="1">Total population (people)</p><input type="number" id="userInput6" placeholder="10000000"/>
+			<br><br>
+			<input id="sas" value="OK" type="submit" onclick="texttovar();" />
+			<hr>
+			<p id="result">Results</p>
+			<p id="result1">Lifeyears lost:</p>
+			<p id="result2">Lifeyears saved:</p>
+			<p id="result3">Total:</p>
+			
+			</form>
+			</font>
+			<button id="sasa3" onclick="document.getElementById('chartContainer').scrollIntoView();">View chart</button>
+			<div id="StandDiv">
+			<img id="Stand" src="https://cdn.discordapp.com/attachments/414062673970462733/695353893185519646/stand.png" alt="Stand" height="600" width="600">
+			<img id="Head" src="https://cdn.discordapp.com/attachments/414062673970462733/695353896964718632/headc.png" alt="Head" height="600" width="600">
+			<img id="Left" src="https://cdn.discordapp.com/attachments/414062673970462733/695593848784683008/wlefteng.png" alt="Left" height="600" width="600">
+			<img id="Right" src="https://cdn.discordapp.com/attachments/414062673970462733/695593846226288761/wrighteng.png" alt="Right" height="600" width="600">
+			</div>
+			
+			<div id="chartContainer" style="height: 370px; width: 100%; top: -100; position: static;"></div>
+			<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+			<iframe width="0" height="0" src="https://www.youtuberepeater.com/watch?v=8mQJVlQ9j_8" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+				
+	</body>
+
+
+<script>
+rindex = 0;
+function move1(rindex) {
+	rindex4 = -rindex / (50 / 4)
+	var elem = document.getElementById("Right");   
+	var pos3 = -1800;
+	var pos2 = -1800;
+	console.log(rindex4)
+	rindex3 = -1910 * (rindex4 / 4)
+	id1 = setInterval(frame, 1);
+	function frame() {
+		if (rindex4 <= 0) {
+			rindex3 = 1684 * (rindex4 / 4)
+			if (pos3 >= rindex3) {
+					lmao()
+					clearInterval(id1);
+					
+					
+				} 
+					else {
+					console.log("work")
+					pos3++
+					pos2--
+					elem.style.top = pos3 + "px";
+					elem.style.left = ((pos2 + 1810) / 1.4) + "px";
+				}
+		}
+		else {
+			if (pos3 <= rindex3) {
+				lmao()
+				clearInterval(id1);
+				
+				
+			
+			} 
+				else {
+				console.log("work")
+				pos3--;
+				pos2--;
+				elem.style.top = pos3 + "px";
+				elem.style.left = (pos2 + 1780) / 2 + "px";
+			}
+		}
+	}	
+}
+function move2(rindex) {
+	rindex = -rindex / (50 / 4)
+	var elem = document.getElementById("Left");   
+	var pos = -1198;
+	var pos2 = -1198;
+	console.log(rindex)
+	rindex2 = -1085 * (rindex / 4)
+	id2 = setInterval(frame2, 1);
+	function frame2() {
+		if (rindex < 0) {
+			rindex2 = 1300 * (rindex / 4)
+			if (pos < rindex2) {
+					lmao()
+					clearInterval(id2);
+					
+				
+				} 
+					else {
+					console.log("work")
+					pos--;
+					pos2++;
+					elem.style.top = pos + "px";
+					elem.style.left = (pos2 + 1210) / 1.95 + "px";
+				}
+		}
+		else {
+			if (pos > rindex2 || rindex2 == 0) {
+				lmao()
+				clearInterval(id2);
+				
+			
+			} 
+				else {
+				console.log("work")
+				pos++
+				pos2++
+				elem.style.top = pos + "px";
+				elem.style.left = ((pos2 + 1210) / 2) + "px";
+			}
+		}
+	}
+
+}
+
+
+function texttovar() {
+	var index = 0;
+	var input1 = document.getElementById("userInput1").value;
+	var input2 = document.getElementById("userInput2").value;
+	var input3 = document.getElementById("userInput3").value;
+	var input4 = document.getElementById("userInput4").value;
+	var input5 = document.getElementById("userInput5").value;
+	var input6 = document.getElementById("userInput6").value;
+	if (input1 == "") {input1 =75}
+	if (input2 == "") {input2 =10}
+	if (input3 == "") {input3 =50}
+	if (input4 == "") {input4 =5000}
+	if (input5 == "") {input5 =1000}
+	if (input6 == "") {input6 =10000000}
+	
+	//valem
+	lifetime1 = (input1 - input3) * (input4 - input5);
+	if (input1 < input3) {lifetime1 = 0;}
+	deaths1 = (input2 / 365) * input6
+
+	lifetime1 = Math.round(lifetime1)
+	deaths1 = Math.round(deaths1)
+	
+	console.log(lifetime1)
+	console.log(deaths1)
+	
+	document.getElementById("result1").innerHTML = "Lifeyears lost: " + deaths1;
+	document.getElementById("result2").innerHTML = "Lifeyears saved: " + lifetime1;
+	document.getElementById("result3").innerHTML = "Total: " + (lifetime1 - deaths1);
+	total = lifetime1 - deaths1
+	
+
+	if (total > 0) {index = 4}
+	else if (total < 0) {index = -4}
+	else {}
+	
+	console.log("index is: " + index)
+	index = index * (50 / 4)
+	console.log("index in degrees: " + index)
+	rindex = index 
+	animateresult(index)
+}
+
+function animateresult(rindex) {
+	// animate rotation
+	var rotated = false;
+	var Head = document.getElementById('Head')
+        deg = rotated ? 0 : rindex;
+
+    Head.style.webkitTransform = 'rotate('+deg+'deg)'; 
+    Head.style.mozTransform    = 'rotate('+deg+'deg)'; 
+    Head.style.msTransform     = 'rotate('+deg+'deg)'; 
+    Head.style.oTransform      = 'rotate('+deg+'deg)'; 
+    Head.style.transform       = 'rotate('+deg+'deg)'; 
+
+    rotated = !rotated;
+	
+	console.log(rindex)
+
+	move1(rindex);
+	move2(rindex);
+	chart();
+}
+
+function chart() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "dark1", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Lifeyears lost or saved"
+	},
+	axisY: {
+		title: "Lifeyears"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: false, 
+
+		dataPoints: [      
+			{ y: lifetime1, label: "Lifeyears saved" },
+			{ y: deaths1,  label: "Lifeyears lost" },
+		]
+	}]
+});
+chart.render();
+}
+function lmao() {console.log("sas")}
+
+
+
+//<button id="sasa" onclick="document.getElementById('chartContainer').scrollIntoView();">View chart</button>
+</script>
+
+
+</html>
